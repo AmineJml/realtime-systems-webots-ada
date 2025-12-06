@@ -12,8 +12,8 @@ package body Tasks is
    -- Event --------------------
    -----------------------------
    protected Event is
-      entry Wait (id : out EventID); -- send event
-      procedure Signal (id : in EventID); -- receive signal
+      entry Wait (id : out EventID);
+      procedure Signal (id : in EventID);
    private
       current_id : EventID;
       signalled  : Boolean := False;
