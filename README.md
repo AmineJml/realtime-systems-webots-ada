@@ -4,7 +4,7 @@ This repository contains a real-time robotics control system developed in **Ada*
 
 > **Authorship & Scope of Work (Transparency Statement)**
 > This project is built on top of an **official Webots + Ada skeleton provided by the course instructors**.
-> **All real-time control logic was implemented by me exclusively in:**
+> **All real-time control logic was implemented by me in:**
 >
 > * `tasks.ads`
 > * `tasks.adb`
@@ -27,18 +27,13 @@ This repository contains a real-time robotics control system developed in **Ada*
 * Uses **three ground-facing light sensors**.
 * Follows the track in **both clockwise and counter-clockwise directions**.
 * Continuous sensor feedback with real-time correction.
-
-### Obstacle-Aware Distance Control
-
-* Uses **front distance sensors**.
-* Dynamically slows down or stops when approaching an obstacle.
-* Maintains a visible safe distance behind moving objects.
+* Obstacle detection and real time reaction (halting when obstacles are detected).
 
 ### Real-Time Architecture
 
 * Ada **tasks with priorities**
-* **Event driven scheduling** (Part 2)
-* **Periodic scheduling** (Part 3)
+* **Event driven scheduling**
+* **Periodic scheduling**
 * **Protected objects** for safe inter-task communication
 * Strict separation between:
 
@@ -51,7 +46,7 @@ This repository contains a real-time robotics control system developed in **Ada*
 
 ## Tech Stack
 
-* **Language:** Ada
+* **Language:** Ada, C (used by Webots and its low-level controller interface)
 * **Simulator:** Webots (e-puck robot)
 ---
 
@@ -77,12 +72,30 @@ This repository contains a real-time robotics control system developed in **Ada*
 ---
 
 ## Simulation Screenshots
+## 🖼️ Simulation Screenshots
+
+### Event-Driven Manual Control (Keyboard)
+
+![Manual Control 1](images/Screenshot%20from%202025-12-06%2013-29-23.png)
+![Manual Control 2](images/Screenshot%20from%202025-12-06%2013-30-08.png)
+
+These screenshots show the robot being manually controlled using keyboard input with real-time event-driven scheduling and automatic black line stopping.
+
+---
+
+### Autonomous Line Following (Periodic Scheduling)
+
+![Line Following 1](images/Screenshot%20from%202025-12-06%2013-31-43.png)
+![Line Following 2](images/Screenshot%20from%202025-12-06%2013-31-56.png)
+
+These screenshots show the robot autonomously following the black track using periodic sensor sampling and closed-loop motor control.
+
 
 ## Learning Outcomes
 
 * Practical implementation of **real-time embedded scheduling**
 * Event vs periodic task comparison
-* Sensor-based closed-loop control
+* Sensor based and closed loop control
 * Safe concurrent programming using **Ada protected objects**
 * Robotics control in a simulated embedded environment
 
