@@ -72,7 +72,6 @@ This repository contains a real-time robotics control system developed in **Ada*
 ---
 
 ## Simulation Screenshots
-## 🖼️ Simulation Screenshots
 
 ### Event-Driven Manual Control (Keyboard)
 
