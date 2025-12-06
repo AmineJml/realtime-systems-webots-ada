@@ -1,0 +1,86 @@
+halo
+
+control robot via keyboard (as long as at least one of the keys
+is pressed) and while it is not over a black line (in which case it should
+immediately stop).
+comes to a total halt as soon as
+the black line is detected, or an alternative implementation where it could
+be driven in the opposite direction (but not past the line).
+
+
+with Ada.Text_IO;   use Ada.Text_IO;
+with Ada.Real_Time; use Ada.Real_Time;
+with System;
+
+with Webots_API; use Webots_API;
+
+package body Tasks is
+   -------------
+   --  Tasks  --
+   -------------
+   type EventID is ( up_button_pressed , down_button_pressed, right_button_pressed, left_button_pressed );
+   task HelloworldTask is
+      -- define its priority higher than the main procedure --
+      -- main procedure priority is declared at main.adb:9
+   end HelloworldTask;
+
+
+   task body HelloworldTask is
+      Next_Time            : Time := Time_Zero;
+      num                  : Integer;
+      up_button_pressed    : Boolean;
+      down_button_pressed  : Boolean;
+      right_button_pressed : Boolean;
+      left_button_pressed  : Boolean;
+   begin
+      -- task body starts here ---
+      set_motor_speed (LeftMotor, 100);
+      set_motor_speed (RightMotor, 100);
+      --       procedure set_motor_speed (id : MotorID; value : Integer);
+      --   function get_light_sensor (id : LightSensorID) return Integer;
+      --   function get_distance_sensor return Integer;
+      --   function get_simulation_stopped return Boolean;
+      --   function get_button_pressed (id : ButtonID) return Boolean;
+      --   function get_simulation_time return Integer;
+
+      loop
+         -- read sensors and print (have a look at webots_api.ads) ----
+         num := read_light_sensor (LS3);
+         up_button_pressed := button_pressed (id => UpButton);
+         down_button_pressed := button_pressed (id => DownButton);
+         right_button_pressed := button_pressed (id => RightButton);
+         left_button_pressed := button_pressed (id => LeftButton);
+
+         if (up_button_pressed) then
+            Put_Line ("UP");
+            set_motor_speed (LeftMotor, 1000);
+            set_motor_speed (RightMotor, 1000);
+         elsif (down_button_pressed) then
+            set_motor_speed (LeftMotor, -100);
+            set_motor_speed (RightMotor, -100);
+         elsif (right_button_pressed) then
+            set_motor_speed (LeftMotor, 100);
+            set_motor_speed (RightMotor,0);
+         elsif (left_button_pressed) then
+            set_motor_speed (LeftMotor, 0);
+            set_motor_speed (RightMotor, 100);
+         else
+            set_motor_speed (LeftMotor, 0);
+            set_motor_speed (RightMotor, 0);
+         end if;
+         Next_Time := Next_Time + Period_Display;
+         delay until Next_Time;
+
+         exit when simulation_stopped;
+      end loop;
+   end HelloworldTask;
+
+   -- Background procedure required for package
+   procedure Background is
+   begin
+      while not simulation_stopped loop
+         delay 0.25;
+      end loop;
+   end Background;
+
+end Tasks;

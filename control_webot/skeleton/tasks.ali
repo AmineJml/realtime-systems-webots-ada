@@ -1,0 +1,191 @@
+V "GNAT Lib v13"
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_ENTRY_CALLS_IN_ELABORATION_CODE
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_PROTECTED_TYPES
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV MAX_PROTECTED_ENTRIES=1
+RV MAX_TASKS=2
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U tasks%b		tasks.adb		2ef34bb1 OO PF PK
+W ada%s			ada.ads			ada.ali
+Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W webots_api%s		webots_api.adb		webots_api.ali  AD
+
+U tasks%s		tasks.ads		8a1d0824 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-calend.ads		20240904144414 e6961b4c ada.calendar%s
+D a-caldel.ads		20240521074737 9f20b83d ada.calendar.delays%s
+D a-except.ads		20240521074738 2a7d8d70 ada.exceptions%s
+D a-finali.ads		20240521074738 bf4f806b ada.finalization%s
+D a-ioexce.ads		20240521074738 40018c65 ada.io_exceptions%s
+D a-reatim.ads		20240521074737 b89a10c3 ada.real_time%s
+D a-retide.ads		20240521074737 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20240521074738 119b8fb3 ada.streams%s
+D a-string.ads		20240521074738 90ac6797 ada.strings%s
+D a-sttebu.ads		20240521074738 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20240521074738 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20240521074738 9eaa38c6 ada.tags%s
+D a-textio.ads		20240521074738 5c2c6153 ada.text_io%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
+D i-cstrea.ads		20240521074738 e53d8b8e interfaces.c_streams%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-atacco.ads		20240521074738 903317eb system.address_to_access_conversions%s
+D s-c_time.ads		20240904144414 535885c5 system.c_time%s
+D s-crtl.ads		20240521074738 8a0692f8 system.crtl%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-ficobl.ads		20240521074738 dc5161d4 system.file_control_block%s
+D s-finroo.ads		20240521074738 4ff27390 system.finalization_root%s
+D s-linux.ads		20240904144414 96312dab system.linux%s
+D s-multip.ads		20240521074738 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20240904144414 ece202eb system.os_constants%s
+D s-osinte.ads		20240904144414 a8f58951 system.os_interface%s
+D s-parame.ads		20240904144414 1f39ba92 system.parameters%s
+D s-putima.ads		20240521074738 17291fe4 system.put_images%s
+D s-secsta.ads		20240521074738 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240521074738 df77073e system.soft_links%s
+D s-stache.ads		20240521074738 0b81c1fe system.stack_checking%s
+D s-stausa.ads		20240521074738 5be75682 system.stack_usage%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240521074738 ab5468e4 system.storage_elements%s
+D s-stoele.adb		20240521074738 8f5a9db6 system.storage_elements%b
+D s-tasinf.ads		20240521074737 528dde74 system.task_info%s
+D s-taspri.ads		20240521074737 4ec891e7 system.task_primitives%s
+D s-taprop.ads		20240521074737 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20240521074737 0ec7ab0b system.tasking%s
+D s-taprob.ads		20240521074737 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20240521074737 60ad3dae system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20240521074737 5f548bb3 system.tasking.protected_objects.operations%s
+D s-tassta.ads		20240521074737 cca55c94 system.tasking.stages%s
+D s-traent.ads		20240521074738 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240521074738 fa2a7f59 system.unsigned_types%s
+D s-wchcon.ads		20240521074738 d9032363 system.wch_con%s
+D tasks.ads		20251201163459 328718e7 tasks%s
+D tasks.adb		20251203131023 55209ee3 tasks%b
+D webots_api.ads	20251127101248 ef8f139d webots_api%s
+G a e
+G c b b b [b tasks 6 1 none]
+G c Z s b [background tasks 5 13 none]
+G c Z b b [wait tasks__event 15 13 none]
+G c Z b b [signal tasks__event 16 17 none]
+G c Z b b [event__signalN tasks 16 7 none]
+G c Z b b [event__signalP tasks 16 7 none]
+G c Z b b [eventTVDI tasks 14 4 none]
+G c Z b b [eventTVDF tasks 14 4 none]
+G c Z b b [eventTVIP tasks 14 4 none]
+G c Z b b [P2bIP tasks 15 7 none]
+G c Z b b [eventdispatchertaskTK tasks 39 9 none]
+G c Z b b [eventdispatchertaskTKVIP tasks 39 4 none]
+G c Z b b [motorcontroltaskTK tasks 110 9 none]
+G c Z b b [motorcontroltaskTKVIP tasks 110 4 none]
+G r c none [b tasks 6 1 none] [button_pressed webots_api 15 12 none]
+G r c none [b tasks 6 1 none] [read_light_sensor webots_api 12 12 none]
+G r c none [b tasks 6 1 none] [set_motor_speed webots_api 11 13 none]
+G r c none [b tasks 6 1 none] [simulation_stopped webots_api 14 12 none]
+G r c none [background tasks 5 13 none] [simulation_stopped webots_api 14 12 none]
+G r c none [eventdispatchertaskTK tasks 39 9 none] [button_pressed webots_api 15 12 none]
+G r c none [eventdispatchertaskTK tasks 39 9 none] [read_light_sensor webots_api 12 12 none]
+G r c none [motorcontroltaskTK tasks 110 9 none] [set_motor_speed webots_api 11 13 none]
+G r c none [motorcontroltaskTK tasks 110 9 none] [simulation_stopped webots_api 14 12 none]
+X 1 ada.ads
+16K9*Ada 20e8 50|1r6 1r31 51|1r6 1r25 2r6 2r25
+X 7 a-reatim.ads
+39K13*Real_Time 186e18 50|1w10 1r35 51|2w10 2r29
+50O9*Time<duration> 50|11r20 51|43r23
+55O9*Time_Span<duration> 50|9r20
+62V13*Clock{50O9} 50|11s28
+66V14*"+"{50O9} 51|102s33
+120V13*Milliseconds{55O9} 50|9s33
+X 14 a-textio.ads
+58K13*Text_IO 787e16 51|1w10 1r29
+566U14*Put_Line 51|69s13
+X 19 system.ads
+37K9*System 153e11 51|3w6
+X 35 s-stausa.ads
+207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
+272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
+X 50 tasks.ads
+4K9*Tasks 9E3 15l5 15e10 51|6b14 153l5 153t10
+5U13*Background 51|146b14 151l8 151t18
+9o3 Period_Display{7|55O9} 51|102r35
+11o3 Time_Zero{7|50O9} 51|43r31
+X 51 tasks.adb
+8E9 EventID 9e71 15r28 16r33 18r20 23r28 29r33 114r18
+9n7 UpPressed{8E9} 73r30 120r18
+9n18 DownPressed{8E9} 79r30 124r18
+9n31 LeftPressed{8E9} 91r30 128r18
+9n44 RightPressed{8E9} 85r30 132r18
+9n58 ReleaseEvent{8E9} 68r26 75r30 81r30 87r30 93r30 136r18
+14w14 Event 22b19 34l8 34t13 68r13 73r16 75r16 79r16 81r16 85r16 87r16 91r16
+. 93r16 117r10
+15Y13 Wait 15<19 23b13 27l11 27t15 117s16
+15e19 id{8E9} 25m10
+16U17 Signal 16>25 29b17 33l11 33t17 68s19 73s22 75s22 79s22 81s22 85s22
+. 87s22 91s22 93s22
+16e25 id{8E9} 29b25 31r24
+18e7 current_id{8E9} 25r16 31r10
+19b7 signalled{boolean} 23r42 26r10 32r10
+23e19 id{8E9}
+39t9 EventDispatcherTask 42b14 105l8 105t27
+43o7 Next_Time{7|50O9} 102m10 102r23 103r22
+45b7 Now_Up{boolean} 60m10 71r17 72r16 97r21
+46b7 Now_Down{boolean} 61m10 77r17 78r16 100r23
+47b7 Now_Left{boolean} 63m10 89r17 90r17 98r25
+48b7 Now_Right{boolean} 62m10 83r17 84r16 99r24
+50b7 Prev_Up{boolean} 71r27 97m10
+51b7 Prev_Down{boolean} 77r30 100m10
+52b7 Prev_Left{boolean} 89r29 98m10
+53b7 Prev_Right{boolean} 83r30 99m10
+55i7 Now_light{integer} 65m10 67r13
+110t9 MotorControlTask 113b14 143l8 143t24
+114e7 ButtonID{8E9} 117m22 119r15
+X 52 webots_api.ads
+1K9*Webots_API 51|4w6 4r25 52|18e15
+8n20*LeftMotor{8E8} 51|121r33 125r33 129r33 133r33 137r33
+8n31*RightMotor{8E8} 51|122r33 126r33 130r33 134r33 138r33
+9n31*LS2{9E8} 51|65r41
+10n21*UpButton{10E8} 51|60r36
+10n31*DownButton{10E8} 51|61r38
+10n43*LeftButton{10E8} 51|63r38
+10n55*RightButton{10E8} 51|62r39
+11U13*set_motor_speed 51|121s16 122s16 125s16 126s16 129s16 130s16 133s16
+. 134s16 137s16 138s16
+12V12*read_light_sensor{integer} 51|65s23
+14V12*simulation_stopped{boolean} 51|141s20 148s17
+15V12*button_pressed{boolean} 51|60s20 61s22 62s23 63s22
+
